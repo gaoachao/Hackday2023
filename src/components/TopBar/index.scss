@@ -1,0 +1,21 @@
+.topbar-container{
+  position: absolute;
+  height: var(--topbar-height);
+  width: 100%;
+  border-bottom:2px solid var(--deeper-white);
+  background-color: var(--bg-black);
+  display: flex;
+  align-items: center;
+  z-index:10;
+
+  .uniquestudio{
+      margin-left:var(--topbar-margin-left);
+  }
+  
+
+  .list{
+    position:absolute;
+    right:8vw;
+    cursor: pointer;
+  }
+}

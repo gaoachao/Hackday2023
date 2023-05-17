@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "PingFang SC";
+  src: url(./assets/font/PingFang-SC-Regular.ttf);
+}
+
+@font-face {
+  font-family: "NanumGothic";
+  src: url(./assets/font/NanumGothic-Regular.ttf);
+}
+
+
+$deeper-white:#D4E2E1;
+$light-white:#EEEFF1;
+$bg-black:#171719;
+$main:#48E4D1;
+
+$topbar-margin-left:7vw;
+$topbar-height:106px;
+
+:root {
+  --deeper-white:#{$deeper-white};
+  --light-white:#{$light-white};
+  --bg-black:#{$bg-black};
+  --main:#{$main};
+
+  --topbar-margin-left:#{$topbar-margin-left};
+  --topbar-height:#{$topbar-height};
+}
+
+
+.h-container{
+  background-color: $bg-black;
+  position: absolute;
+  width:100vw;
+}

@@ -1,0 +1,145 @@
+$button-right: 17vw;
+$button-width: 18vw;
+$button-shadow-width: 9vw;
+
+.container {
+  height: 100vh;
+  position: relative;
+  .fake-topbar {
+    height: var(--topbar-height);
+  }
+
+  .line {
+    // border-box方便计算
+    box-sizing: border-box;
+    height: 21vh;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--deeper-white);
+  }
+
+  .first-line {
+    @extend .line;
+
+    .reshuffle {
+      flex: 7;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: var(--topbar-margin-left);
+      .content {
+        margin-top: 2vh;
+        color: var(--deeper-white);
+        font-size: 1.5rem;
+        font-family: "NanumGothic";
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        line-height: 2.4rem;
+      }
+    }
+
+    .uniquestudio {
+      flex: 12;
+      height: 100%;
+      border-left: 2px solid var(--deeper-white);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .second-line {
+    @extend .line;
+    .hackday {
+      flex: 13;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .year {
+      flex: 5;
+      height: 100%;
+      border-left: 2px solid var(--deeper-white);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .third-line {
+    @extend .line;
+    border-left: 2px solid var(--deeper-white);
+    margin-left: 10vw;
+    position: relative;
+    .content {
+      color: var(--deeper-white);
+      font-size: 2rem;
+      font-family: "NanumGothic";
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      line-height: 2.2rem;
+      margin: 0 8vw 0 4vw;
+      position: absolute;
+      top: 2vh;
+    }
+    .button-shadow {
+      position: absolute;
+      bottom: 0;
+      border: 2px solid var(--deeper-white);
+      width: $button-shadow-width;
+      height: 7vh;
+      right: calc($button-right + $button-width - $button-shadow-width);
+    }
+  }
+
+  .bottom {
+    display: flex;
+    height: calc(37vh - var(--topbar-height));
+    .left {
+      flex: 7;
+      height: 100%;
+      position: relative;
+      .left-top {
+        position: absolute;
+        height: 5vh;
+        width: 24vw;
+        top: 0;
+        right: 0;
+        border-left: 2px solid var(--deeper-white);
+        border-bottom: 2px solid var(--deeper-white);
+      }
+    }
+    .right {
+      flex: 10;
+      height: 100%;
+      border-left: 2px solid var(--deeper-white);
+    }
+  }
+
+  .button {
+    color: var(--main);
+    font-family: "PingFang SC";
+    font-size: 2rem;
+    font-weight: 600;
+    position: absolute;
+    border: 2px solid var(--deeper-white);
+    width: $button-width;
+    height: 9vh;
+    top: calc(63vh + var(--topbar-height) - 4.5vh);
+    right: $button-right;
+    background-color: var(--bg-black);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover{
+      color:var(--bg-black);
+      transition: color .5s ease-in-out;
+    }
+  }
+
+}
