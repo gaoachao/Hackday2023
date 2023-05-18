@@ -16,6 +16,7 @@ $main:#48E4D1;
 
 $topbar-margin-left:7vw;
 $topbar-height:106px;
+$main-left:26vw;
 
 :root {
   --deeper-white:#{$deeper-white};
@@ -25,6 +26,7 @@ $topbar-height:106px;
 
   --topbar-margin-left:#{$topbar-margin-left};
   --topbar-height:#{$topbar-height};
+  --main-left:#{$main-left};
 }
 
 

@@ -44,7 +44,7 @@ const Home = () => {
         <div className={styles["right"]}></div>
       </div>
       <div className={styles["button"]}>
-        立即报名
+        <p>立即报名</p>
       </div>
     </div>
   );

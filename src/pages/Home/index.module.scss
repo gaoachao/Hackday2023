@@ -2,6 +2,24 @@ $button-right: 17vw;
 $button-width: 18vw;
 $button-shadow-width: 9vw;
 
+@keyframes fill-animation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes unfill-animation {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
 .container {
   height: 100vh;
   position: relative;
@@ -121,8 +139,9 @@ $button-shadow-width: 9vw;
   .button {
     color: var(--main);
     font-family: "PingFang SC";
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 600;
+    letter-spacing: 5px;
     position: absolute;
     border: 2px solid var(--deeper-white);
     width: $button-width;
@@ -130,16 +149,33 @@ $button-shadow-width: 9vw;
     top: calc(63vh + var(--topbar-height) - 4.5vh);
     right: $button-right;
     background-color: var(--bg-black);
-    z-index: 10;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: color 2s ease-in-out;
 
-    &:hover{
-      color:var(--bg-black);
-      transition: color .5s ease-in-out;
+    p{
+      z-index:1;
+    }
+
+    &:hover {
+      color: var(--bg-black);
+      transition: color 2s ease-in-out;
+    }
+
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: var(--main);
+      transition: width 2s ease;
+    }
+    &:hover:before {
+      width: 100%;
     }
   }
-
 }
