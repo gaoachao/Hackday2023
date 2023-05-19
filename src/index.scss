@@ -15,8 +15,14 @@ $bg-black:#171719;
 $main:#48E4D1;
 
 $topbar-margin-left:7vw;
+$topbar-margin-right:8vw;
 $topbar-height:106px;
 $main-left:26vw;
+$second-column-margin: 3vw;
+$first-line-bottom:3vh;
+
+// 突出线条的突出长度
+$protuberance:4vw;
 
 :root {
   --deeper-white:#{$deeper-white};
@@ -25,8 +31,13 @@ $main-left:26vw;
   --main:#{$main};
 
   --topbar-margin-left:#{$topbar-margin-left};
+  --topbar-margin-right:#{$topbar-margin-right};
   --topbar-height:#{$topbar-height};
   --main-left:#{$main-left};
+  --second-column-margin:#{$second-column-margin};
+  --first-line-bottom:#{$first-line-bottom};
+
+  --protuberance:#{$protuberance};
 }
 
 

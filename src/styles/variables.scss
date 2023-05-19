@@ -1,0 +1,12 @@
+$small-title-cn: ".small-title-cn";
+
+.small-title-cn {
+  font-family: "PingFang SC";
+  color: var(--main);
+  position: absolute;
+  bottom: var(--first-line-bottom);
+  left: var(--topbar-margin-left);
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}

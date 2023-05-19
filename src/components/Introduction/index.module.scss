@@ -1,7 +1,7 @@
+@import '@styles/variables.scss';
+
 $first-line-height: 24vh;
-$firt-line-bottom:3vh;
 $second-column-width: 30vw;
-$second-column-margin: 3vw;
 $border-style: 2px solid var(--deeper-white);
 
 .container {
@@ -20,6 +20,10 @@ $border-style: 2px solid var(--deeper-white);
       box-sizing: border-box;
       height: $first-line-height;
       border-bottom: $border-style;
+      position:relative;
+      .title-content{
+        @extend #{$small-title-cn};
+      }
     }
   }
 
@@ -50,7 +54,7 @@ $border-style: 2px solid var(--deeper-white);
       left: calc(var(--main-left) - 4vw);
       //边框的厚度
       transform: translateY(-2px);
-      width: 4vw;
+      width: var(--protuberance);
       height: 2px;
       background-color: var(--deeper-white);
     }
@@ -60,14 +64,24 @@ $border-style: 2px solid var(--deeper-white);
       @extend .line;
       height: $first-line-height;
       position:relative;
+      display: flex;
+
       .title-en {
         @extend .second-column;
         .svg-introduction{
           position: absolute;
-          bottom:$firt-line-bottom;
-          left:$second-column-margin;
+          bottom:var(--first-line-bottom);
+          left:var(--second-column-margin);
         }
       }
+      .hackday-container{
+        .svg-hackday{
+          position: absolute;
+          bottom:var(--first-line-bottom);
+          right:var(--topbar-margin-right);
+        }
+      }
+
     }
 
     .second-line {
@@ -80,8 +94,8 @@ $border-style: 2px solid var(--deeper-white);
         position:relative;
         .svg-picture{
           position: absolute;
-          left:$second-column-margin;
-          //height:90%;
+          left:var(--second-column-margin);
+          max-width:25vw;
         }
       }
     }

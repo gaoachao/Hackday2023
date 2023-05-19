@@ -9,13 +9,13 @@
   z-index:10;
 
   .uniquestudio{
-      margin-left:var(--topbar-margin-left);
+    margin-left:var(--topbar-margin-left);
   }
   
 
   .list{
     position:absolute;
-    right:8vw;
+    right:var(--topbar-margin-right);
     cursor: pointer;
   }
 }
