@@ -1,0 +1,48 @@
+@import "@styles/variables.scss";
+
+$border-style: 2px solid var(--deeper-white);
+$rule-first-line-height: 15vh;
+
+.rule-container {
+  box-sizing: border-box;
+  border-bottom: $border-style;
+  height: 57vh;
+  width: 100%;
+  display: flex;
+  .aside {
+    box-sizing: border-box;
+    height: 100%;
+    width: var(--main-left);
+    border-right: $border-style;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .title-cn {
+      box-sizing: border-box;
+      height: $rule-first-line-height;
+      border-bottom: $border-style;
+      position: relative;
+      .title-content {
+        @extend #{$small-title-cn};
+      }
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: calc(100vw - var(--main-left));
+    .first-line {
+      box-sizing: border-box;
+      height: $rule-first-line-height;
+      width: 100%;
+      border-bottom: $border-style;
+      position: relative;
+      .svg-rule {
+        position: absolute;
+        bottom: var(--first-line-bottom);
+        left: var(--second-column-margin);
+      }
+    }
+  }
+}

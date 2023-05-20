@@ -1,6 +1,6 @@
 @import '@styles/variables.scss';
 
-$first-line-height: 24vh;
+$first-line-height: 15vh;
 $second-column-width: 30vw;
 $border-style: 2px solid var(--deeper-white);
 
@@ -87,15 +87,37 @@ $border-style: 2px solid var(--deeper-white);
     .second-line {
       @extend .line;
       height: 55vh;
+      display:flex;
       .picture {
         @extend .second-column;
         display: flex;
         align-items: center;
         position:relative;
+        width:$second-column-width;
+        flex:none;
         .svg-picture{
           position: absolute;
           left:var(--second-column-margin);
           max-width:25vw;
+        }
+      }
+      .description{
+        // 501px 是正常情况下画的高度
+        margin-top:calc((55vh - 501px)/2);
+        margin-left:var(--second-column-margin);
+        margin-right:var(--topbar-margin-right);
+        font-family:'PingFang SC';
+        //width:calc(100vw - var(--main-left) - $second-column-width);
+        .description-title{
+          font-size:1.8rem;
+          font-weight: 600;
+          color:var(--light-white);
+        }
+        .description-content{
+          margin-top:2.5vh;
+          font-size:1.25rem;
+          line-height: 1.5rem;
+          color:var(--deeper-white);
         }
       }
     }
