@@ -1,0 +1,166 @@
+@import '@styles/variables.scss';
+
+$first-line-height: 15vh;
+$second-line-height:52vh;
+$second-column-width: 28vw;
+$third-column-width:25vw;
+$border-style: 2px solid var(--deeper-white);
+
+.introduction-container {
+
+  height: 100vh;
+  .fake-topbar {
+    height: var(--topbar-height);
+    box-sizing: border-box;
+    border-top: $border-style;
+  }
+
+  .container {
+    box-sizing: border-box;
+    border-top: $border-style;
+    height: calc(100vh - var(--topbar-height));
+    width: 100%;
+    display: flex;
+
+    .aside {
+      box-sizing: border-box;
+      height: 100%;
+      width: var(--main-left);
+      border-right: $border-style;
+
+      .title-cn {
+        box-sizing: border-box;
+        height: $first-line-height;
+        border-bottom: $border-style;
+        position: relative;
+
+        .title-content {
+          @extend #{$small-title-cn};
+        }
+      }
+    }
+
+    .content {
+      box-sizing: border-box;
+      height: 100%;
+      width: calc(100vw - var(--main-left));
+      display: flex;
+      flex-direction: column;
+
+      // 复用样式区域
+      .line {
+        box-sizing: border-box;
+        border-bottom: $border-style;
+      }
+
+      .second-column {
+        height: 100%;
+        width: $second-column-width;
+        border-right: $border-style;
+      }
+
+      // 用于伪元素的复用样式
+      .protuberance {
+        content: "";
+        position: absolute;
+        //祖先元素中非static定位的是最外面的container，所以相对它定位
+        left: calc(var(--main-left) - 4vw);
+        //边框的厚度
+        transform: translateY(-2px);
+        width: var(--protuberance);
+        height: 2px;
+        background-color: var(--deeper-white);
+      }
+
+      .first-line {
+        @extend .line;
+        height: $first-line-height;
+        position: relative;
+        display: flex;
+
+        .svg-introduction {
+          position: absolute;
+          bottom: var(--first-line-bottom);
+          left: var(--second-column-margin);
+        }
+
+        .svg-hackday {
+          position: absolute;
+          bottom: var(--first-line-bottom);
+          right: var(--topbar-margin-right);
+        }
+
+      }
+
+      .second-line {
+        @extend .line;
+        height: $second-line-height;
+        display: flex;
+
+        .picture {
+          display: flex;
+          align-items: center;
+          position: relative;
+          width: $second-column-width;
+          flex: none;
+
+          .introduction-picture {
+            position: absolute;
+            left: var(--second-column-margin);
+            height: 42vh;
+          }
+        }
+
+        .description {
+          margin-top: 5vh;
+          margin-right: var(--topbar-margin-right);
+          font-family: 'PingFang SC';
+
+          .description-content {
+            margin-top: 3vh;
+            @extend #{$content-font-style};
+          }
+        }
+      }
+
+      .third-line {
+        display:flex;
+        height:calc(100vh - var(--topbar-height) - $first-line-height - $second-line-height);
+
+        &::before {
+          @extend .protuberance;
+        }
+
+        .third-line-title{
+          font-family: "PingFang SC";
+          font-size: 1.6rem;
+          color:var(--light-white);
+          margin-top:3vh;
+        }
+
+        .third-line-content{
+          @extend #{$content-font-style};
+          margin-top:2vh;
+        }
+
+        .time{
+          width: $second-column-width;
+
+          &>div{
+            margin-left:var(--second-column-margin)
+          }
+        }
+        .shape{
+          width: $third-column-width;
+        }
+        .contestant{
+          width:calc(100vw - var(--main-left) - $second-column-width - $third-column-width);
+
+          &>div{
+            margin-right: var(--topbar-margin-right);
+          }
+        }
+      }
+    }
+  }
+}

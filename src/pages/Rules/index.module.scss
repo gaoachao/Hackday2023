@@ -1,0 +1,154 @@
+@import '@styles/variables.scss';
+
+$first-line-height: 15vh;
+$second-line-height: 52vh;
+$border-style: 2px solid var(--deeper-white);
+$line-margin-top:3vh;
+
+.introduction-container {
+  height: 100vh;
+
+  .fake-topbar {
+    height: var(--topbar-height);
+    box-sizing: border-box;
+    border-top: $border-style;
+  }
+
+  .container {
+    box-sizing: border-box;
+    border-top: $border-style;
+    height: calc(100vh - var(--topbar-height));
+    width: 100%;
+    display: flex;
+
+    // 内容文字的公共类
+    .big-name {
+      @extend #{$big-title};
+      padding-top:3vh;
+    }
+
+    .middle-name {
+      @extend #{$middle-title};
+      padding-bottom:1vh;
+    }
+    .small-name{
+      @extend #{$small-title};
+      padding-bottom:1vh;
+    }
+    .item-content {
+      @extend #{$content-font-style};
+    }
+
+    .aside {
+      box-sizing: border-box;
+      height: 100%;
+      width: var(--main-left);
+      border-right: $border-style;
+
+      .title-cn {
+        box-sizing: border-box;
+        height: $first-line-height;
+        border-bottom: $border-style;
+        position: relative;
+
+        .title-content {
+          @extend #{$small-title-cn};
+        }
+      }
+
+      .sign-up {
+        box-sizing: border-box;
+        border-bottom: $border-style;
+        height: $second-line-height;
+
+        &>div {
+          margin-left: var(--topbar-margin-left);
+          margin-right:2vw;
+        }
+
+        .sign-up-item{
+          margin-top:3vh;
+        }
+      }
+
+      .standard {
+        &>div{
+          margin-left: var(--topbar-margin-left);
+        }
+      }
+    }
+
+    .content {
+      box-sizing: border-box;
+      height: 100%;
+      width: calc(100vw - var(--main-left));
+      display: flex;
+      flex-direction: column;
+
+      // 复用样式区域
+      .line {
+        box-sizing: border-box;
+        border-bottom: $border-style;
+      }
+
+      .first-line {
+        @extend .line;
+        height: $first-line-height;
+        position: relative;
+        display: flex;
+
+        .svg-rules {
+          position: absolute;
+          bottom: var(--first-line-bottom);
+          // 由于设计稿的改版，这里的second-column-margin只在Introduction页面有效，其余页面left的值与topbar-margin-left相同
+          // left: var(--second-column-margin);
+          left: var(--topbar-margin-left);
+        }
+      }
+
+      .second-line {
+        @extend .line;
+        height: $second-line-height;
+
+        &>div{
+          margin-left:var(--topbar-margin-left);
+        }
+        .rules-container{
+          display: flex;
+          margin-top:3vh;
+          .rules-online{
+            width:28vw;
+            margin-right:10vw;
+            .online-padding{
+              padding-top:4vh;
+            }
+          }
+          .rules-offline{
+            box-sizing: border-box;
+            width:calc(100vw - var(--main-left) - 28vw);
+            margin-right:var(--topbar-margin-right);
+            .rules-item{
+              display: flex;
+              justify-content: space-between;
+              
+              .rules-item-content{
+                color:var(--deeper-white);
+                font-family: "PingFang SC";
+                font-size:1.3rem;
+                padding-top:1vh;
+              }
+            }
+          }
+        }
+
+      }
+
+      .third-line {
+        &>div{
+          margin-left:var(--topbar-margin-left);
+          margin-top:$line-margin-top;
+        }
+      }
+    }
+  }
+}

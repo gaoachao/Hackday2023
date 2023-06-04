@@ -1,4 +1,9 @@
 $small-title-cn: ".small-title-cn";
+$content-font-style: ".content-font-style";
+$big-title:".big-title";
+$middle-title:".middle-title";
+$small-title:".small-title";
+$content-text:".content-text";
 
 .small-title-cn {
   font-family: "PingFang SC";
@@ -9,4 +14,44 @@ $small-title-cn: ".small-title-cn";
   font-size: 1.8rem;
   font-weight: 600;
   letter-spacing: 0.1rem;
+}
+
+.content-font-style{
+  font-family: "PingFang SC";
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: var(--deeper-white);
+}
+
+// Rules Awards 等页面的加粗标题
+.big-title{
+  font-family: "PingFang SC";
+  font-size: 1.5rem;
+  font-weight: 650;
+  line-height: 1.75rem;
+  color: var(--light-white);
+}
+
+// Rules Awards 等页面的小标题
+.small-title{
+  font-family: "PingFang SC";
+  font-size: 1.2rem;
+  line-height: 1.75rem;
+  color: var(--light-white);
+}
+// Rules Awards 等页面的中标题
+.middle-title{
+  font-family: "PingFang SC";
+  font-size: 1.3rem;
+  line-height: 1.75rem;
+  color: var(--light-white);
+}
+
+// Rules Awards 等页面的正文
+.content-text{
+  font-family: "PingFang SC";
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+  color: var(--deeper-white);
+  letter-spacing: 0.015rem;
 }
