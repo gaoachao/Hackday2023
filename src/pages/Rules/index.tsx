@@ -1,12 +1,18 @@
-import { FC } from "react";
+import { forwardRef } from "react";
 import styles from "./index.module.scss";
 import { ReactComponent as SVGRules } from "@assets/svg/Rules/rules.svg";
 
 
-const Rules: FC = () => {
+interface Props {
+  //Rules组件不需要Props
+}
+
+const Rules = forwardRef<HTMLDivElement, Props>((_, ref) => {
   return (
-    <div className={styles["introduction-container"]}>
-      <div className={styles["fake-topbar"]}></div>
+    <div className={styles["introduction-container"]} ref={ref}>
+      <div className={styles["fake-topbar"]}>
+        <div className={styles["fake-aside"]}></div>
+      </div>
       <div className={styles["container"]}>
         <div className={styles["aside"]}>
           <div className={styles["title-cn"]}>
@@ -91,6 +97,6 @@ const Rules: FC = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Rules;

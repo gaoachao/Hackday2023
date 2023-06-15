@@ -1,22 +1,46 @@
 @import '@styles/variables.scss';
 
-$first-line-height: 15vh;
+$first-line-height: 12vh;
 $second-line-height: 52vh;
 $border-style: 2px solid var(--deeper-white);
-$line-margin-top:3vh;
+$line-margin-top: 3vh;
 
 .awards-container {
   height: 100vh;
+  position: relative;
 
   .fake-topbar {
     height: var(--topbar-height);
     box-sizing: border-box;
     border-top: $border-style;
+    .fake-aside{
+      width:var(--main-left);
+      height: 100%;
+      box-sizing: border-box;
+      border-right: $border-style;
+    }
+  }
+
+  // 底部三张图片的公共类
+  .awards-picture {
+    position: absolute;
+    bottom:5vh;
+  }
+  .awards-picture-1{
+    left:var(--topbar-margin-left);
+    max-width: calc(var(--main-left) - var(--topbar-margin-left) - 2vw);
+  }
+  .awards-picture-2{
+    left:calc(var(--main-left) + var(--topbar-margin-left));
+    max-width:35vw;
+  }
+  .awards-picture-3{
+    right:var(--topbar-margin-right);
+    max-width:20vw;
   }
 
   .container {
     box-sizing: border-box;
-    border-top: $border-style;
     height: calc(100vh - var(--topbar-height));
     width: 100%;
     display: flex;
@@ -24,19 +48,12 @@ $line-margin-top:3vh;
     // 内容文字的公共类
     .big-name {
       @extend #{$big-title};
-      padding-top:3vh;
+      padding-top: 3vh;
     }
 
     .middle-name {
       @extend #{$middle-title};
-      padding-bottom:1vh;
-    }
-    .small-name{
-      @extend #{$small-title};
-      padding-bottom:1vh;
-    }
-    .item-content {
-      @extend #{$content-font-style};
+      padding-bottom: 1.5vh;
     }
 
     .aside {
@@ -56,6 +73,12 @@ $line-margin-top:3vh;
         }
       }
 
+      .awards-items {
+        margin-top: 3vh;
+        &>div {
+          margin-left: var(--topbar-margin-left);
+        }
+      }
     }
 
     .content {
@@ -87,10 +110,26 @@ $line-margin-top:3vh;
       }
 
       .second-line {
-        &>div{
-          margin-left:var(--topbar-margin-left);
+        &>div {
+          margin-left: var(--topbar-margin-left);
         }
 
+        .awards-en-items {
+          margin-right: var(--topbar-margin-right);
+          margin-top: 3vh;
+
+          .awards-en-item {
+            display: flex;
+            justify-content: space-between;
+            color: var(--light-white);
+            font-family: 'NanumGothic';
+            font-style: normal;
+            font-size: 1.75rem;
+            line-height: 1.75rem;
+            letter-spacing: 0.125em;
+            padding-top: 3vh;
+          }
+        }
       }
 
     }

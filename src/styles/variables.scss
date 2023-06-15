@@ -26,8 +26,8 @@ $content-text:".content-text";
 // Rules Awards 等页面的加粗标题
 .big-title{
   font-family: "PingFang SC";
-  font-size: 1.5rem;
-  font-weight: 650;
+  font-size: 1.75rem;
+  font-weight: 700;
   line-height: 1.75rem;
   color: var(--light-white);
 }
@@ -35,14 +35,14 @@ $content-text:".content-text";
 // Rules Awards 等页面的小标题
 .small-title{
   font-family: "PingFang SC";
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   line-height: 1.75rem;
   color: var(--light-white);
 }
 // Rules Awards 等页面的中标题
 .middle-title{
   font-family: "PingFang SC";
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   line-height: 1.75rem;
   color: var(--light-white);
 }
@@ -50,7 +50,7 @@ $content-text:".content-text";
 // Rules Awards 等页面的正文
 .content-text{
   font-family: "PingFang SC";
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   line-height: 1.3rem;
   color: var(--deeper-white);
   letter-spacing: 0.015rem;

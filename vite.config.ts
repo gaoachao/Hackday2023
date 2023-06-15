@@ -10,11 +10,14 @@ export default defineConfig({
   },
   resolve:{
     alias:{
+      '@':'/src',
       '@components': '/src/components',
       '@pages':'/src/pages',
       '@assets':'/src/assets',
       '@styles':'/src/styles',
-      '@':'/src',
+      '@consts':'/src/consts',
+      '@myTypes':'/src/types',
+      '@mobile':'/src/mobile',
     }
   }
 })

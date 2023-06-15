@@ -1,6 +1,6 @@
 @import '@styles/variables.scss';
 
-$first-line-height: 15vh;
+$first-line-height: 12vh;
 $second-line-height: 52vh;
 $border-style: 2px solid var(--deeper-white);
 $line-margin-top:3vh;
@@ -9,14 +9,19 @@ $line-margin-top:3vh;
   height: 100vh;
 
   .fake-topbar {
+    border-top: $border-style;
     height: var(--topbar-height);
     box-sizing: border-box;
-    border-top: $border-style;
+    .fake-aside{
+      width:var(--main-left);
+      height: 100%;
+      box-sizing: border-box;
+      border-right: $border-style;
+    }
   }
 
   .container {
     box-sizing: border-box;
-    border-top: $border-style;
     height: calc(100vh - var(--topbar-height));
     width: 100%;
     display: flex;
@@ -135,7 +140,7 @@ $line-margin-top:3vh;
                 color:var(--deeper-white);
                 font-family: "PingFang SC";
                 font-size:1.3rem;
-                padding-top:1vh;
+                padding-top:0.8vh;
               }
             }
           }

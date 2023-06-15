@@ -64,6 +64,9 @@ $button-shadow-width: 9vw;
       display: flex;
       justify-content: center;
       align-items: center;
+      .svg-uniquestudio{
+        max-width: 55vw;
+      }
     }
   }
 
@@ -75,6 +78,9 @@ $button-shadow-width: 9vw;
       display: flex;
       justify-content: center;
       align-items: center;
+      .svg-hackday{
+        max-width: 60vw;
+      }
     }
     .year {
       flex: 5;
@@ -83,6 +89,9 @@ $button-shadow-width: 9vw;
       display: flex;
       justify-content: center;
       align-items: center;
+      .svg-year{
+        max-width:25vw;
+      }
     }
   }
 
@@ -98,9 +107,9 @@ $button-shadow-width: 9vw;
       font-weight: 400;
       letter-spacing: 0.01em;
       line-height: 2.2rem;
-      margin: 0 8vw 0 4vw;
+      margin: 0 8vw 0 6vw;
       position: absolute;
-      top: 2vh;
+      top: 4vh;
     }
     .button-shadow {
       position: absolute;

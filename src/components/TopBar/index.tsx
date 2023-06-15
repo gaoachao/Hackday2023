@@ -1,14 +1,30 @@
-import { FC } from "react";
+import { FC, CSSProperties } from "react";
 import "./index.scss";
 
 import { ReactComponent as SVGUniqueStudio } from "@assets/svg/TopBar/uniquestudio.svg";
 import { ReactComponent as SVGList } from "@assets/svg/TopBar/list.svg";
 
-const TopBar: FC = () => {
+interface TopBarProps {
+  setIsMenu: (state: boolean) => void,
+  isPC: boolean,
+}
+
+const TopBar: FC<TopBarProps> = (props: TopBarProps) => {
+  const { isPC, setIsMenu } = props;
+  const mobileStyle: CSSProperties = {
+    height: '8vh',
+    borderBottom:'1px solid var(--deeper-white)',
+  }
+  const handleClick = () => {
+    setIsMenu(true);
+  }
   return (
-    <div className="topbar-container">
+    <div className="topbar-container" style={!isPC ? mobileStyle : undefined}>
       <SVGUniqueStudio className="uniquestudio" />
-      <SVGList className="list" />
+      { isPC && <SVGList
+        className="list"
+        onClick={handleClick}
+      />}
     </div>
   );
 };

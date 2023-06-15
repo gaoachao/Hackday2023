@@ -6,9 +6,12 @@ import { ReactComponent as SVGYear } from "@assets/svg/Home/year.svg";
 import { ReactComponent as SVGReshuffle } from "@assets/svg/Home/Reshuffle.svg";
 import { ReactComponent as SVGUniqueStudio } from "@assets/svg/Home/UniqueStudio.svg";
 
-const Home = () => {
+interface Props {
+  //Home组件不需要Props
+}
+const Home = forwardRef<HTMLDivElement, Props>((_, ref) => {
   return (
-    <div className={styles["container"]}>
+    <div className={styles["container"]} ref={ref}>
       <div className={styles["fake-topbar"]}></div>
       <div className={styles["first-line"]}>
         <div className={styles["reshuffle"]}>
@@ -24,16 +27,15 @@ const Home = () => {
       </div>
       <div className={styles["second-line"]}>
         <div className={styles["hackday"]}>
-          <SVGHackday />
+          <SVGHackday className={styles["svg-hackday"]}/>
         </div>
         <div className={styles["year"]}>
-          <SVGYear />
+          <SVGYear className={styles["svg-year"]}/>
         </div>
       </div>
       <div className={styles["third-line"]}>
         <div className={styles["content"]}>
-          “Don’t know what to put here but there should be something here.
-          English and full of meanings that no one give a shit.”
+          Once a hacker, always a hacker
         </div>
         <div className={styles["button-shadow"]}></div>
       </div>
@@ -43,11 +45,13 @@ const Home = () => {
         </div>
         <div className={styles["right"]}></div>
       </div>
-      <div className={styles["button"]}>
-        <p>立即报名</p>
-      </div>
+      <a href="https://console.hack.hustunique.com" target="_blank">
+        <div className={styles["button"]}>
+          <p>立即报名</p>
+        </div>
+      </a>
     </div>
   );
-};
+});
 
 export default Home;

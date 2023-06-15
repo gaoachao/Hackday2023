@@ -1,0 +1,370 @@
+@import '@styles/variables.scss';
+
+$bold-border-style: 2px solid var(--deeper-white);
+$normal-border-style: 1px solid var(--deeper-white);
+$topbar-height: 8vh;
+$main-margin-left: 6vw;
+$main-margin-right: 6vw;
+$picture-gap: 6vw;
+
+.mobile-main-title {
+  font-family: 'Roboto Flex';
+  color: var(--main);
+  font-size: 6.3vw;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+}
+
+.mobile-main-text {
+  color: var(--deeper-white);
+  letter-spacing: 0.075rem;
+  line-height: 5vw;
+  font-size: 4vw;
+  font-family: 'PingFang SC';
+  text-align: justify;
+}
+
+.mobile-main-container {
+  background-color: var(--bg-black);
+
+  .fake-topbar {
+    box-sizing: border-box;
+    height: $topbar-height;
+  }
+
+  .main-introduction {
+    height: calc(100vh - $topbar-height);
+    position: relative;
+
+    .top-right-div {
+      position: absolute;
+      right: 0;
+      width: 32vw;
+      height: 22vh;
+      border-bottom: $normal-border-style;
+      border-left: $normal-border-style;
+    }
+
+    .main-introduction-content {
+      position: absolute;
+      left: 0;
+      top: 12vh;
+      width: 75vw;
+      height: 42vh;
+      border-top: $bold-border-style;
+      border-bottom: $bold-border-style;
+      border-right: $bold-border-style;
+      z-index: 10;
+
+      .introduction-title {
+        @extend .mobile-main-title;
+        margin-top: 3vh;
+        margin-left: $main-margin-left;
+      }
+
+      .introduction-hackday {
+        font-family: 'Rowdies';
+        color: var(--light-white);
+        font-size: 5vw;
+        font-weight: 300;
+        margin-top: 1.5vh;
+        margin-left: $main-margin-left;
+      }
+
+      .introduction-text {
+        @extend .mobile-main-text;
+        margin-top: 1.2vh;
+        margin-left: $main-margin-left;
+        width: 60vw;
+      }
+      .cover-box{
+        position:absolute;
+        top:0;
+        right:0;
+        width:7.5vw;
+        height: 10.1vh;
+        background-color: var(--bg-black);
+      }
+    }
+
+    .introduction-picture {
+      display: block;
+      position: absolute;
+      width: 60vw;
+      bottom: 10vh;
+      right: $main-margin-right;
+      max-height: 36vh;
+    }
+  }
+
+  .main-arrange {
+    @extend .mobile-main-text;
+    height: 12vh;
+    max-height: 95px;
+    border-top: $normal-border-style;
+    box-sizing: border-box;
+
+    .main-arrange-item {
+      margin-left: $main-margin-left;
+      margin-right: $main-margin-right;
+      margin-top: 1.5vh;
+      width: calc(100vw - $main-margin-left - $main-margin-right);
+      display: flex;
+      justify-content: space-between;
+
+      .main-arrange-title {
+        font-size: 5vw;
+        margin-top: 2px;
+      }
+
+      .main-arrange-content {
+        display: inline-block;
+        width: 45vw;
+        text-align: justify;
+        word-break: break-all;
+      }
+    }
+  }
+
+  .main-rules {
+    .main-rules-title {
+      height: 6vh;
+      margin-top: 2vh;
+      margin-left: $main-margin-left;
+    }
+
+    .signup-content-bigtitle {
+      font-family: 'Roboto Flex';
+      color: var(--light-white);
+      font-size: 5.5vw;
+      margin-top: 2vh;
+
+      .online-game-title {
+        font-size: 4vw;
+        margin-left: 4vw;
+      }
+    }
+
+    .signup-content-smalltitle {
+      color: var(--deeper-white);
+      font-size: 4.5vw;
+      margin-top: 2.5vh;
+      margin-bottom: 1.2vh;
+    }
+
+    .main-rules-signup {
+      display: flex;
+      height: 36vh;
+      border-top: $normal-border-style;
+
+      .rules-signup-content {
+        width: 82vw;
+        font-family: 'PingFang SC';
+
+        &>div {
+          margin-left: $main-margin-left;
+          margin-right: 10vw;
+        }
+      }
+
+      .rules-signup-aside {
+        box-sizing: border-box;
+        width: 18vw;
+        border-left: $normal-border-style;
+      }
+    }
+
+    .main-rules-rule {
+      display: flex;
+      height: 36vh;
+      border-top: $normal-border-style;
+
+      .rules-signup-content {
+        width: 82vw;
+        font-family: 'PingFang SC';
+
+        &>div {
+          margin-left: 10vw;
+          margin-right: $main-margin-right;
+        }
+      }
+
+      .rules-signup-aside {
+        box-sizing: border-box;
+        width: 18vw;
+        border-right: $normal-border-style;
+      }
+    }
+
+    .main-offline-game-container {
+      height: 36vh;
+      border-top: $normal-border-style;
+
+      &>div {
+        margin-left: $main-margin-left;
+        margin-right: $main-margin-right;
+      }
+
+      .offline-game-title {
+        margin-bottom: 3vh;
+      }
+
+      .online-game-item {
+        @extend .mobile-main-text;
+        width: calc(100vw - $main-margin-left - $main-margin-right);
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1vh;
+      }
+    }
+
+    .main-game-standard {
+      min-height: 36vh;
+      border-top: $normal-border-style;
+
+      &>div {
+        margin-left: $main-margin-left;
+        margin-right: $main-margin-right;
+      }
+
+      .game-standard-content {
+        color: var(--light-white);
+        margin-top: 1.8vh;
+        margin-bottom: 5vh;
+        font-size: 4vw;
+        font-weight: 700;
+      }
+
+      .image-container {
+        .image-item {
+          display: flex;
+          justify-content: space-between;
+          margin-top: $picture-gap;
+        }
+
+        .image-item-picture {
+          display: block;
+          width: calc((100vw - $main-margin-left - $main-margin-right - $picture-gap) /2);
+        }
+      }
+    }
+
+    .main-awards-container {
+      margin-top: 5vh;
+      height: 30vh;
+
+      &>div {
+        margin-left: $main-margin-left;
+        margin-right: $main-margin-right;
+      }
+
+      .main-awards-title {
+        @extend .mobile-main-title;
+        margin-bottom: 2.5vh;
+      }
+
+      .main-awards-item {
+        @extend .mobile-main-text;
+        width: calc(100vw - $main-margin-left - $main-margin-right);
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2vh;
+
+        .awards-item-title {
+          font-family: 'oboto Flex';
+          font-weight: 500;
+          font-size: 4.5vw;
+        }
+
+        .awards-item-content {
+          font-family: 'NanumGothic';
+          font-size: 4vw;
+        }
+      }
+    }
+
+    .main-contact-container {
+      border-top: $normal-border-style;
+      height: 35vh;
+      position: relative;
+
+      &>div {
+        margin-left: $main-margin-left;
+        margin-right: $main-margin-right;
+      }
+
+      .main-contact-title {
+        @extend .mobile-main-title;
+        margin-bottom: 1vh;
+        margin-top: 3vh;
+      }
+
+      .contact-item-title {
+        color: var(--light-white);
+        font-size: 5.5vw;
+        margin-top: 2.2vh;
+        margin-bottom: 1.2vh;
+      }
+
+      .contact-item-content {
+        @extend .mobile-main-text;
+        margin-left: 10vw;
+
+        margin-bottom: 0.5vh;
+
+        .mail-text {
+          color: var(--deeper-white);
+          font-family: 'NanumGothic';
+          font-size: 4.5vw;
+          display: block;
+          // mailto协议的特殊之处，用white-space属性实现换行是无效的
+          word-wrap: break-word;
+        }
+      }
+
+      .right-top-box {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-bottom: $normal-border-style;
+        border-left: $normal-border-style;
+        height: 8vh;
+        width: 40vw;
+      }
+    }
+
+    .main-sponsor-container {
+      border-top: $normal-border-style;
+      height: 50vh;
+
+      &>div {
+        margin-left: $main-margin-left;
+        margin-right: $main-margin-right;
+      }
+
+      .main-sponsor-title {
+        @extend .mobile-main-title;
+        margin-bottom: 1vh;
+        margin-top: 3vh;
+      }
+
+      .main-sponsor-item {
+        display: flex;
+        justify-content: space-between;
+        margin-top:2vh;
+        .sponsor-item-title {
+          color:var(--light-white);
+          font-family: 'Roboto Flex';
+          font-weight: 700;
+          font-size: 4.7vw;
+          line-height: 5vw;
+          letter-spacing: 0.075rem;
+        }
+        .sponsor-item-object{
+          @extend .mobile-main-text;
+          margin-bottom:1vh;
+        }
+      }
+    }
+  }
+}

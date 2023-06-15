@@ -1,0 +1,102 @@
+@import '@styles/variables.scss';
+
+$first-line-height: 12vh;
+$border-style: 2px solid var(--deeper-white);
+
+.awards-container {
+  height: 100vh;
+
+  .fake-topbar {
+    height: var(--topbar-height);
+    box-sizing: border-box;
+    border-top: $border-style;
+    .fake-aside{
+      width:var(--main-left);
+      height: 100%;
+      box-sizing: border-box;
+      border-right: $border-style;
+    }
+  }
+
+  .container {
+    box-sizing: border-box;
+    height: calc(100vh - var(--topbar-height));
+    width: 100%;
+    display: flex;
+
+    .aside {
+      box-sizing: border-box;
+      height: 100%;
+      width: var(--main-left);
+      border-right: $border-style;
+
+      .title-cn {
+        box-sizing: border-box;
+        height: $first-line-height;
+        border-bottom: $border-style;
+        position: relative;
+
+        .title-content {
+          @extend #{$small-title-cn};
+        }
+      }
+      .organizers-container{
+        margin-top:3vh;
+        margin-left:var(--topbar-margin-left);
+        .organizers-title-text{
+          margin-bottom:2vh;
+        }
+        .organizers-us{
+          margin-top:2vh;
+          //max-width: calc(var(--main-left) - var(--topbar-margin-left) - 3vw);
+          .organizers-us-text{
+            @extend #{$small-title};
+            margin-top:1.2vh;
+            max-width: min(calc(var(--main-left) - var(--topbar-margin-left) - 3vw),180px);
+            letter-spacing: 0.085rem
+          }
+          .organizers-picture{
+            max-width: calc(var(--main-left) - var(--topbar-margin-left) - 3vw);
+          }
+        }
+      }
+    }
+
+    .content {
+      box-sizing: border-box;
+      height: 100%;
+      width: calc(100vw - var(--main-left));
+      display: flex;
+      flex-direction: column;
+
+      // 复用样式区域
+      .line {
+        box-sizing: border-box;
+        border-bottom: $border-style;
+      }
+
+      .first-line {
+        @extend .line;
+        height: $first-line-height;
+        position: relative;
+        display: flex;
+
+        .svg-sponsor {
+          position: absolute;
+          bottom: var(--first-line-bottom);
+          // 由于设计稿的改版，这里的second-column-margin只在Introduction页面有效，其余页面left的值与topbar-margin-left相同
+          // left: var(--second-column-margin);
+          left: var(--topbar-margin-left);
+        }
+      }
+
+      .second-line {
+        &>div{
+          margin-left:var(--topbar-margin-left);
+        }
+
+      }
+
+    }
+  }
+}

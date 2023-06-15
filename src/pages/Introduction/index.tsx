@@ -1,13 +1,19 @@
-import { FC } from "react";
+import { forwardRef } from "react";
 import styles from "./index.module.scss";
 import { ReactComponent as SVGIntroduction } from "@assets/svg/Introduction/introduction.svg";
 import { ReactComponent as SVGHackday } from "@assets/svg/Introduction/hackday.svg";
 import { ReactComponent as SVGHackdayContent } from "@assets/svg/Introduction/hackday-content.svg";
 
-const Introduction: FC = () => {
+interface Props {
+  //Introduction组件不需要Props
+}
+
+const Introduction = forwardRef<HTMLDivElement, Props>((_, ref) => {
   return (
-    <div className={styles["introduction-container"]}>
-      <div className={styles["fake-topbar"]}></div>
+    <div className={styles["introduction-container"]} ref={ref}>
+      <div className={styles["fake-topbar"]}>
+        <div className={styles["fake-aside"]}></div>
+      </div>
       <div className={styles["container"]}>
         <div className={styles["aside"]}>
           <div className={styles["title-cn"]}>
@@ -51,6 +57,6 @@ const Introduction: FC = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Introduction;
