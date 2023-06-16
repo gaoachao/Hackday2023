@@ -36,7 +36,7 @@ const App: FC = () => {
   // canvas
   const CanvasRef = useRef<HTMLCanvasElement | null>(null);
   // mouse
-  const MouseRef = useRef({x:0,y:0});
+  // const MouseRef = useRef({x:0,y:0});
 
   const switchPage = useCallback((pageIndex: number) => {
     if (
@@ -170,10 +170,10 @@ const App: FC = () => {
         !isPC && 
         <MainMobile />
       }
-      <canvas 
+      {/* <canvas 
         className='mouse-track'
         ref={CanvasRef}
-      />
+      /> */}
     </div>
   )
 }
