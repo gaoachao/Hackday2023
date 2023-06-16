@@ -1,16 +1,24 @@
-import { FC, useState, useRef, useCallback, useEffect } from 'react';
+import { 
+  FC, 
+  lazy,
+  Suspense,
+  useState, 
+  useRef, 
+  useCallback, 
+  useEffect 
+} from 'react';
 import "./index.scss";
 
 import TopBar from '@components/TopBar';
-import Home from "@pages/Home";
-import Introduction from "@pages/Introduction";
-import Rules from '@pages/Rules';
-import Awards from '@pages/Awards';
-import Access from '@pages/Access';
-import Sponsor from '@pages/Sponsor';
-import Menu from '@pages/Menu';
-
-import MainMobile from '@mobile/Main';
+const Home = lazy(()=> import("@pages/Home"))
+// import Home from "@pages/Home";
+const Introduction =  lazy(()=>import("@pages/Introduction"));
+const Rules = lazy(()=>import('@pages/Rules'));
+const Awards = lazy(()=>import('@pages/Awards'));
+const Access = lazy(()=>import('@pages/Access'));
+const Sponsor = lazy(()=>import('@pages/Sponsor'));
+const Menu = lazy(()=>import('@pages/Menu'));
+const MainMobile = lazy(()=>import('@mobile/Main'));
 
 const PageMax: number = 6;
 
@@ -148,13 +156,14 @@ const App: FC = () => {
       {
         isPC &&
         <div>
-          
-          <Home ref={HomeRef} />
-          <Introduction ref={IntroductionRef} />
-          <Rules ref={RulesRef} />
-          <Awards ref={AwardsRef} />
-          <Access ref={AccessRef} />
-          <Sponsor ref={SponsorRef} />
+          <Suspense>
+            <Home ref={HomeRef} />
+            <Introduction ref={IntroductionRef} />
+            <Rules ref={RulesRef} />
+            <Awards ref={AwardsRef} />
+            <Access ref={AccessRef} />
+            <Sponsor ref={SponsorRef} />
+          </Suspense>
         </div>
       }
       {
@@ -168,7 +177,10 @@ const App: FC = () => {
       }
       {
         !isPC && 
-        <MainMobile />
+        <Suspense>
+          <MainMobile />
+        </Suspense>
+        
       }
       {/* <canvas 
         className='mouse-track'

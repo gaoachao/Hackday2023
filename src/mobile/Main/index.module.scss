@@ -32,6 +32,100 @@ $picture-gap: 6vw;
     height: $topbar-height;
   }
 
+  .main-home {
+    height: calc(100vh - $topbar-height);
+    position: relative;
+    box-sizing: border-box;
+    border-bottom: $normal-border-style;
+
+    .home-line{
+      height:12vh;
+      box-sizing: border-box;
+      border-bottom: $normal-border-style;
+    }
+    .home-svg-container{
+      display: flex;
+      align-items: center;
+      margin-left:$main-margin-left;
+    }
+    .home-svg{
+      min-height: 8vh;
+    }
+    .home-first-line{
+      @extend .home-line;
+      .first-line-left{
+        width:30vw;
+        height:100%;
+        border-right: $normal-border-style;
+      }
+    }
+    .home-second-line{
+      @extend .home-line;
+      .second-line-left{
+        @extend .home-svg-container;
+        width:70vw;
+        height:100%;
+        border-right: $normal-border-style;
+      }
+    }
+    .home-third-line{
+      @extend .home-line;
+      .third-line-left{
+        @extend .home-svg-container;
+        width:85vw;
+        height:100%;
+        border-right: $normal-border-style;
+      }
+    }
+    .home-fourth-line{
+      @extend .home-line;
+      .fourth-line-left{
+        @extend .home-svg-container;
+        width:40vw;
+        height:100%;
+        border-right: $normal-border-style;
+      }
+    }
+    .home-bottom{
+      height: calc(100vh - $topbar-height - 48vh); //44vh
+      position: relative;
+      .vertical-line{
+        position: absolute;
+        height:17vh;
+        width:32vw;
+      }
+      .bottom-first-line{
+        @extend .vertical-line;
+        top:0;
+        border-right:$normal-border-style;
+      }
+      .bottom-second-line{
+        @extend .vertical-line;
+        bottom:0;
+        right:0;
+        border-left:$normal-border-style;
+      }
+      .home-bottom-button{
+        position: absolute;
+        top:17vh;
+        left:21vw;
+        width:58vw;
+        height:10vh;
+        box-sizing: border-box;
+        border: $bold-border-style;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        .bottom-button-text{
+          color:var(--main);
+          font-size: min(6.8vw,32px);
+          letter-spacing: 1.2vw;
+          font-weight: 700;
+        }
+      }
+    }
+  }
   .main-introduction {
     height: calc(100vh - $topbar-height);
     position: relative;

@@ -39,7 +39,7 @@ export const itemArray:string[] = [
   '赞助商 / Sponsor',
 ];
 export const IntroductionArray:IntroductionType[] = [
-  {'时间':'2023.7.1-2023.7.8'},
+  {'时间':'2023.7.1-2023.7.9'},
   {'形式':'线上参赛，线下答辩'},
   {'参赛对象':'通过简历筛选，来⾃全国各⼤⾼校的学⽣团队'},
 ];
