@@ -34,7 +34,7 @@ const App: FC = () => {
   const AccessRef = useRef<HTMLDivElement | null>(null);
   const SponsorRef = useRef<HTMLDivElement | null>(null);
   // canvas
-  const CanvasRef = useRef<HTMLCanvasElement | null>(null);
+  // const CanvasRef = useRef<HTMLCanvasElement | null>(null);
   // mouse
   // const MouseRef = useRef({x:0,y:0});
 
