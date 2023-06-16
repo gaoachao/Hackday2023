@@ -17,7 +17,7 @@ export default defineConfig({
       '@styles':'/src/styles',
       '@consts':'/src/consts',
       '@myTypes':'/src/types',
-      '@mobile':'/src/mobile',
+      '@mobile':'/src/mobile',     
     }
-  }
+  }, 
 })

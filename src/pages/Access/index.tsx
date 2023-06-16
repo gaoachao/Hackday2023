@@ -19,7 +19,7 @@ const Access= forwardRef<HTMLDivElement, Props>((_, ref) => {
           </div>
           <div className={styles["mail-container"]}>
             <img
-              src="./src/assets/image/Access/1.png"
+              src="./public/image/Access/1.png"
             />
             <a href="mailto:contact@hustunique.com" className={styles["mail-text"]}>
               contact@hustunique.com
@@ -32,7 +32,7 @@ const Access= forwardRef<HTMLDivElement, Props>((_, ref) => {
           </div>
           <div className={styles["second-line"]}>
           <img
-              src="./src/assets/image/Access/2.png"
+              src="./public/image/Access/2.png"
               className={styles["access-picture-2"]}
           />
           <div className={styles["access-contact-text"]}>湖北省 武汉市 洪⼭区 珞喻路1037号 华中科技⼤学 启明学院</div>

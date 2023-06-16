@@ -41,15 +41,15 @@ const Awards= forwardRef<HTMLDivElement, Props>((_, ref) => {
         </div>
       </div>
       <img
-        src="./src/assets/image/Awards/1.png"
+        src="./public/image/Awards/1.png"
         className={[styles["awards-picture"],styles["awards-picture-1"]].join(' ')}
       />
       <img
-        src="./src/assets/image/Awards/2.png"
+        src="./public/image/Awards/2.png"
         className={[styles["awards-picture"],styles["awards-picture-2"]].join(' ')}
       />
       <img
-        src="./src/assets/image/Awards/3.png"
+        src="./public/image/Awards/3.png"
         className={[styles["awards-picture"],styles["awards-picture-3"]].join(' ')}
       />
     </div>
