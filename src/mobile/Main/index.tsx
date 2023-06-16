@@ -59,10 +59,10 @@ const MainMobile: FC = () => {
               <span className={styles["online-game-title"]}>线上比赛</span>
             </div>
             <div className={styles["signup-content-smalltitle"]}>时间</div>
-            <div className={styles["mobile-main-text"]}>2023-7-1 0:00 ⾄ 2023-7-5 18:00</div>
+            <div className={styles["mobile-main-text"]}>2023-7-1 18:00 ⾄ 2023-7-5 18:00</div>
             <div className={styles["signup-content-smalltitle"]}>要求</div>
             <div className={styles["mobile-main-text"]}>各团队完成产品开发⽅案，并在截⽌时间前提交作品。</div>
-            <div className={styles["mobile-main-text"]}>主办⽅对作品进⾏审核，于7-6 18:00前确定答辩⼈选。</div>
+            <div className={styles["mobile-main-text"]}>主办⽅对作品进⾏审核，于7-5 23:59前确定答辩⼈选。</div>
           </div>
         </div>
         <div className={styles["main-offline-game-container"]}>

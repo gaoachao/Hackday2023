@@ -8,16 +8,16 @@ import {
 
 export const awardsArray: awardsType[] = [
   {
-    'Champion': '15,000 RMB',
+    'Champion': '10,000 RMB',
   },
   {
-    'Silver': '8,000 RMB',
+    'Silver': '5,000 RMB',
   },
   {
-    'Bronze': '5,000 RMB',
+    'Bronze': '3,000 RMB',
   },
   {
-    'Best of Category': '2,500 RMB',
+    'Best of Category': '2,000 RMB',
   },
   {
     'Corporate': 'TBD',
@@ -54,16 +54,16 @@ export const timeLineArray:timeLineType[] = [
 ];
 export const awardsMobile:awardsMobileType[] = [
   {
-    '冠军': '15,000 RMB',
+    '冠军': '10,000 RMB',
   },
   {
-    '亚军': '8,000 RMB',
+    '亚军': '5,000 RMB',
   },
   {
-    '季军': '5,000 RMB',
+    '季军': '3,000 RMB',
   },
   {
-    '分类最佳奖': '2,500 RMB',
+    '分类最佳奖': '2,000 RMB',
   },
   {
     '企业特色奖': 'TBD',

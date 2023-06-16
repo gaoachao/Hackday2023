@@ -35,7 +35,7 @@ const Home = forwardRef<HTMLDivElement, Props>((_, ref) => {
       </div>
       <div className={styles["third-line"]}>
         <div className={styles["content"]}>
-          Once a hacker, always a hacker
+        From mind to machine, in the Hackday scene, we craft the unseen, making innovation supreme.
         </div>
         <div className={styles["button-shadow"]}></div>
       </div>

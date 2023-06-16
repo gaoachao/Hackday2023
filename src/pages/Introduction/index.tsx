@@ -42,7 +42,7 @@ const Introduction = forwardRef<HTMLDivElement, Props>((_, ref) => {
           <div className={styles["third-line"]}>
             <div className={styles["time"]}>
               <div className={styles["third-line-title"]}>时间</div>
-              <div className={styles["third-line-content"]}>2023.7.1-2023.7.8</div>
+              <div className={styles["third-line-content"]}>2023.7.1-2023.7.9</div>
             </div>
             <div className={styles["shape"]}>
               <div className={styles["third-line-title"]}>形式</div>
