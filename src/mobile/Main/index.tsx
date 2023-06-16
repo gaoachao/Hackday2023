@@ -22,7 +22,7 @@ const MainMobile: FC = () => {
           <div className={styles["cover-box"]}></div>
         </div>
         <img
-          src="./public/image/introduction-picture.png"
+          src="/image/introduction-picture.png"
           className={styles["introduction-picture"]}
         />
       </div>
@@ -87,21 +87,21 @@ const MainMobile: FC = () => {
           <div className={styles["image-container"]}>
             <div className={styles["image-item"]}>
               <img
-                src="./public/mobile/1.png"
+                src="/mobile/1.png"
                 className={styles["image-item-picture"]}
               />
               <img
-                src="./public/mobile/2.png"
+                src="/mobile/2.png"
                 className={styles["image-item-picture"]}
               />
             </div>
             <div className={styles["image-item"]}>
               <img
-                src="./public/mobile/3.png"
+                src="/mobile/3.png"
                 className={styles["image-item-picture"]}
               />
               <img
-                src="./public/mobile/4.png"
+                src="/mobile/4.png"
                 className={styles["image-item-picture"]}
               />
             </div>

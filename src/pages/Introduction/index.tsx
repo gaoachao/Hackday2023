@@ -28,7 +28,7 @@ const Introduction = forwardRef<HTMLDivElement, Props>((_, ref) => {
           <div className={styles["second-line"]}>
             <div className={styles["picture"]}>
               <img
-                src="./public/image/introduction-picture.png"
+                src="/image/introduction-picture.png"
                 className={styles["introduction-picture"]}
               />
             </div>

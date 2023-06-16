@@ -50,7 +50,7 @@ const Menu: FC<MenuProps> = (props:MenuProps) => {
         </div>
         <div className={styles["menu-aside-icon"]}>
           <img
-            src="./public/image/icon.png"
+            src="/image/icon.png"
             className={styles["menu-aside-picture"]}
           />
         </div>

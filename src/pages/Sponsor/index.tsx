@@ -21,14 +21,14 @@ const Sponsor= forwardRef<HTMLDivElement, Props>((_, ref) => {
             <div className={[styles["big-title"],styles["organizers-title-text"]].join(' ')}>主办方</div>
             <div className={styles["organizers-us"]}>
               <img 
-                src="./public/image/Sponsor/1.png"
+                src="/image/Sponsor/1.png"
                 className={styles["organizers-picture"]}
               />
               <div className={styles["organizers-us-text"]}>华中科技⼤学联创团队</div>
             </div>
             <div className={styles["organizers-us"]}>
               <img 
-                src="./public/image/Sponsor/2.png"
+                src="/image/Sponsor/2.png"
                 className={styles["organizers-picture"]}
               />
               <div className={styles["organizers-us-text"]}>华中科技⼤学启明学院</div>
