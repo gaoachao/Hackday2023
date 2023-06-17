@@ -1,6 +1,10 @@
 import { FC } from 'react';
 import styles from './index.module.scss';
 
+import { ReactComponent as SVGHackday } from "@assets/svg/Mobile/hackday.svg";
+import { ReactComponent as SVGYear } from "@assets/svg/Mobile/2023.svg";
+import { ReactComponent as SVGUniqueStudio } from "@assets/svg/Mobile/UniqueStudio.svg";
+
 import { 
   IntroductionArray, 
   timeLineArray,
@@ -11,6 +15,35 @@ const MainMobile: FC = () => {
   return (
     <div className={styles["mobile-main-container"]}>
       <div className={styles["fake-topbar"]}></div>
+      <div className={styles["main-home"]}>
+        <div className={styles["home-first-line"]}>
+          <div className={styles["first-line-left"]}></div>
+        </div>
+        <div className={styles["home-second-line"]}>
+          <div className={styles["second-line-left"]}>
+            <SVGUniqueStudio className={styles["home-svg"]}/>
+          </div>
+        </div>
+        <div className={styles["home-third-line"]}>
+          <div className={styles["third-line-left"]}>
+            <SVGHackday className={styles["home-svg"]}/>
+          </div>
+        </div>
+        <div className={styles["home-fourth-line"]}>
+          <div className={styles["fourth-line-left"]}>
+            <SVGYear className={styles["home-svg"]}/>
+          </div>
+        </div>
+        <div className={styles["home-bottom"]}>
+          <a href="https://console.hack.hustunique.com" target="_blank">
+            <div className={styles["home-bottom-button"]}>
+              <div className={styles["bottom-button-text"]}>立即报名</div>
+            </div>
+          </a>
+          <div className={styles["bottom-first-line"]}></div>
+          <div className={styles["bottom-second-line"]}></div>
+        </div>
+      </div>
       <div className={styles["main-introduction"]}>
         <div className={styles["top-right-div"]}></div>
         <div className={styles["main-introduction-content"]}>
