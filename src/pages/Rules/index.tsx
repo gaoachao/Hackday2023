@@ -46,10 +46,10 @@ const Rules = forwardRef<HTMLDivElement, Props>((_, ref) => {
                 <div className={styles["middle-name"]}>线上比赛</div>
                 <div className={styles["rules-description"]}>
                   <div className={styles["small-name"]}>时间</div>
-                  <div className={styles["content-text"]}>2023-7-1 00:00 ⾄ 2023-7-5 18:00</div>
+                  <div className={styles["content-text"]}>2023-7-1 18:00 ⾄ 2023-7-5 18:00</div>
                   <div className={[styles["small-name"],styles["online-padding"]].join(' ')}>要求</div>
                   <div className={styles["content-text"]}>各团队完成产品开发⽅案，并在截⽌时间前提交作品。</div>
-                  <div className={styles["content-text"]}>主办⽅对作品进⾏审核，于7-6 18:00前确定答辩⼈选。</div>
+                  <div className={styles["content-text"]}>主办⽅对作品进⾏审核，于7-5 23:59前确定答辩⼈选。</div>
                 </div>
               </div>
               <div className={styles["rules-offline"]}>

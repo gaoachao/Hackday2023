@@ -48,15 +48,16 @@ $border-style: 2px solid var(--deeper-white);
         }
         .organizers-us{
           margin-top:2vh;
-          //max-width: calc(var(--main-left) - var(--topbar-margin-left) - 3vw);
+          max-width: calc(var(--main-left) - var(--topbar-margin-left) - 5vw);
           .organizers-us-text{
             @extend #{$small-title};
             margin-top:1.2vh;
-            max-width: min(calc(var(--main-left) - var(--topbar-margin-left) - 3vw),180px);
+            //max-width: min(calc(var(--main-left) - var(--topbar-margin-left) - 3vw),180px);
             letter-spacing: 0.085rem
           }
           .organizers-picture{
-            max-width: calc(var(--main-left) - var(--topbar-margin-left) - 3vw);
+            height:23vh;
+            max-width: calc(var(--main-left) - var(--topbar-margin-left) - 5vw);
           }
         }
       }
