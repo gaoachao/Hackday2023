@@ -11,12 +11,13 @@ import "./index.scss";
 
 import TopBar from '@components/TopBar';
 import Home from "@pages/Home";
+import Menu from "@pages/Menu";
 const Introduction =  lazy(()=>import("@pages/Introduction"));
 const Rules = lazy(()=>import('@pages/Rules'));
 const Awards = lazy(()=>import('@pages/Awards'));
 const Access = lazy(()=>import('@pages/Access'));
 const Sponsor = lazy(()=>import('@pages/Sponsor'));
-const Menu = lazy(()=>import('@pages/Menu'));
+
 const MainMobile = lazy(()=>import('@mobile/Main'));
 
 const PageMax: number = 6;
