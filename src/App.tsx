@@ -10,8 +10,7 @@ import {
 import "./index.scss";
 
 import TopBar from '@components/TopBar';
-const Home = lazy(()=> import("@pages/Home"))
-// import Home from "@pages/Home";
+import Home from "@pages/Home";
 const Introduction =  lazy(()=>import("@pages/Introduction"));
 const Rules = lazy(()=>import('@pages/Rules'));
 const Awards = lazy(()=>import('@pages/Awards'));
@@ -156,8 +155,8 @@ const App: FC = () => {
       {
         isPC &&
         <div>
+          <Home ref={HomeRef} />
           <Suspense>
-            <Home ref={HomeRef} />
             <Introduction ref={IntroductionRef} />
             <Rules ref={RulesRef} />
             <Awards ref={AwardsRef} />
