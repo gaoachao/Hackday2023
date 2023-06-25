@@ -9,6 +9,7 @@ import {
   IntroductionArray, 
   timeLineArray,
   awardsMobile,
+  sponsorArray,
 } from '@consts/index';
 
 const MainMobile: FC = () => {
@@ -173,17 +174,30 @@ const MainMobile: FC = () => {
         </div>
         <div className={styles["main-sponsor-container"]}>
           <div className={styles["main-sponsor-title"]}>主办方和赞助商</div>
-          <div className={styles["main-sponsor-item"]}>
-            <div className={styles["sponsor-item-title"]}>主办方</div>
-            <div className={styles["sponsor-item-content"]}>
-              <div className={styles["sponsor-item-object"]}>华中科技大学联创团队</div>
-              <div className={styles["sponsor-item-object"]}>华中科技大学启明学院</div>
+          <div className={styles["main-charge-item"]}>
+            <div className={styles["charge-item-title"]}>主办方</div>
+            <div className={styles["charge-item-content"]}>
+              <div className={styles["charge-item-object"]}>华中科技大学联创团队</div>
+              <div className={styles["charge-item-object"]}>华中科技大学启明学院</div>
             </div>
           </div>
           <div className={styles["main-sponsor-item"]}>
-            <div className={styles["sponsor-item-title"]}>赞助商</div>
+            <div className={styles["charge-item-title"]}>赞助商</div>
             <div className={styles["sponsor-item-content"]}>
-              
+              {
+                sponsorArray.map((item,index)=>{
+                  return (
+                    <div className={styles["sponsor-item"]} key={index}>
+                      <img
+                        src={`/mobile/sponsor${index+1}.png`}
+                        className={styles["sponsor-picture"]}
+                      />
+                      <div className={styles["sponsor-item-title"]}>{Object.keys(item)[0]}</div>
+                      <div className={styles["sponsor-item-content"]}>{Object.values(item)[0]}</div>
+                    </div>
+                  )
+                })
+              }
             </div>
           </div>
         </div>

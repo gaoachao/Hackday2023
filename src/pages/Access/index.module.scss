@@ -99,11 +99,11 @@ $line-margin-top:5vh;
           margin-bottom:2.5vh;
           left:var(--topbar-margin-left);
           width:calc(100vw - var(--main-left) - var(--topbar-margin-left) - var(--topbar-margin-right));
-          max-height: calc(100vh - var(--topbar-height) - $first-line-height - $line-margin-top - 12vh);
+          max-height: calc(100vh - var(--topbar-height) - $first-line-height - $line-margin-top - 14vh);
         }
         .access-contact-text{
           font-family: "PinFang SC";
-          font-size: 1.5rem;
+          font-size: 1.4rem;
           line-height: 2.3rem;
           letter-spacing: 0.15rem;
           color:var(--light-white);

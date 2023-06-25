@@ -1,4 +1,4 @@
-@import '@styles/variables.scss';
+@import "@styles/variables.scss";
 
 $bold-border-style: 2px solid var(--deeper-white);
 $normal-border-style: 1px solid var(--deeper-white);
@@ -8,7 +8,7 @@ $main-margin-right: 6vw;
 $picture-gap: 6vw;
 
 .mobile-main-title {
-  font-family: 'Roboto Flex';
+  font-family: "Roboto Flex";
   color: var(--main);
   font-size: 6.3vw;
   font-weight: 700;
@@ -20,7 +20,7 @@ $picture-gap: 6vw;
   letter-spacing: 0.075rem;
   line-height: 5vw;
   font-size: 4vw;
-  font-family: 'PingFang SC';
+  font-family: "PingFang SC";
   text-align: justify;
 }
 
@@ -37,88 +37,88 @@ $picture-gap: 6vw;
     position: relative;
     box-sizing: border-box;
 
-    .home-line{
-      height:12vh;
+    .home-line {
+      height: 12vh;
       box-sizing: border-box;
       border-bottom: $normal-border-style;
     }
-    .home-svg-container{
+    .home-svg-container {
       display: flex;
       align-items: center;
-      margin-left:$main-margin-left;
+      margin-left: $main-margin-left;
     }
-    .home-svg{
+    .home-svg {
       min-height: 8vh;
     }
-    .home-first-line{
+    .home-first-line {
       @extend .home-line;
-      .first-line-left{
-        width:30vw;
-        height:100%;
+      .first-line-left {
+        width: 30vw;
+        height: 100%;
         border-right: $normal-border-style;
       }
     }
-    .home-second-line{
+    .home-second-line {
       @extend .home-line;
-      .second-line-left{
+      .second-line-left {
         @extend .home-svg-container;
-        width:70vw;
-        height:100%;
+        width: 70vw;
+        height: 100%;
         border-right: $normal-border-style;
       }
     }
-    .home-third-line{
+    .home-third-line {
       @extend .home-line;
-      .third-line-left{
+      .third-line-left {
         @extend .home-svg-container;
-        width:85vw;
-        height:100%;
+        width: 85vw;
+        height: 100%;
         border-right: $normal-border-style;
       }
     }
-    .home-fourth-line{
+    .home-fourth-line {
       @extend .home-line;
-      .fourth-line-left{
+      .fourth-line-left {
         @extend .home-svg-container;
-        width:40vw;
-        height:100%;
+        width: 40vw;
+        height: 100%;
         border-right: $normal-border-style;
       }
     }
-    .home-bottom{
+    .home-bottom {
       height: calc(100vh - $topbar-height - 48vh); //44vh
       position: relative;
-      .vertical-line{
+      .vertical-line {
         position: absolute;
-        height:17vh;
-        width:32vw;
+        height: 17vh;
+        width: 32vw;
       }
-      .bottom-first-line{
+      .bottom-first-line {
         @extend .vertical-line;
-        top:0;
-        border-right:$normal-border-style;
+        top: 0;
+        border-right: $normal-border-style;
       }
-      .bottom-second-line{
+      .bottom-second-line {
         @extend .vertical-line;
-        bottom:0;
-        right:0;
-        border-left:$normal-border-style;
+        bottom: 0;
+        right: 0;
+        border-left: $normal-border-style;
       }
-      .home-bottom-button{
+      .home-bottom-button {
         position: absolute;
-        top:17vh;
-        left:21vw;
-        width:58vw;
-        height:10vh;
+        top: 17vh;
+        left: 21vw;
+        width: 58vw;
+        height: 10vh;
         box-sizing: border-box;
         border: $bold-border-style;
         display: flex;
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        .bottom-button-text{
-          color:var(--main);
-          font-size: min(6.8vw,32px);
+        .bottom-button-text {
+          color: var(--main);
+          font-size: min(6.8vw, 32px);
           letter-spacing: 1.2vw;
           font-weight: 700;
         }
@@ -156,7 +156,7 @@ $picture-gap: 6vw;
       }
 
       .introduction-hackday {
-        font-family: 'Rowdies';
+        font-family: "Rowdies";
         color: var(--light-white);
         font-size: 5vw;
         font-weight: 300;
@@ -170,11 +170,11 @@ $picture-gap: 6vw;
         margin-left: $main-margin-left;
         width: 60vw;
       }
-      .cover-box{
-        position:absolute;
-        top:0;
-        right:0;
-        width:7.5vw;
+      .cover-box {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 7.5vw;
         height: 10.1vh;
         background-color: var(--bg-black);
       }
@@ -227,10 +227,10 @@ $picture-gap: 6vw;
     }
 
     .signup-content-bigtitle {
-      font-family: 'Roboto Flex';
+      font-family: "Roboto Flex";
       color: var(--light-white);
       font-size: 5.5vw;
-      margin-top: 2vh;
+      margin-top: 3vh;
 
       .online-game-title {
         font-size: 4vw;
@@ -247,14 +247,14 @@ $picture-gap: 6vw;
 
     .main-rules-signup {
       display: flex;
-      height: 36vh;
+      height: 40vh;
       border-top: $normal-border-style;
 
       .rules-signup-content {
         width: 82vw;
-        font-family: 'PingFang SC';
+        font-family: "PingFang SC";
 
-        &>div {
+        & > div {
           margin-left: $main-margin-left;
           margin-right: 10vw;
         }
@@ -269,14 +269,14 @@ $picture-gap: 6vw;
 
     .main-rules-rule {
       display: flex;
-      height: 36vh;
+      height: 40vh;
       border-top: $normal-border-style;
 
       .rules-signup-content {
         width: 82vw;
-        font-family: 'PingFang SC';
+        font-family: "PingFang SC";
 
-        &>div {
+        & > div {
           margin-left: 10vw;
           margin-right: $main-margin-right;
         }
@@ -290,10 +290,10 @@ $picture-gap: 6vw;
     }
 
     .main-offline-game-container {
-      height: 36vh;
+      height: 40vh;
       border-top: $normal-border-style;
 
-      &>div {
+      & > div {
         margin-left: $main-margin-left;
         margin-right: $main-margin-right;
       }
@@ -315,7 +315,7 @@ $picture-gap: 6vw;
       min-height: 36vh;
       border-top: $normal-border-style;
 
-      &>div {
+      & > div {
         margin-left: $main-margin-left;
         margin-right: $main-margin-right;
       }
@@ -325,7 +325,7 @@ $picture-gap: 6vw;
         margin-top: 1.8vh;
         margin-bottom: 5vh;
         font-size: 4vw;
-        font-weight: 700;
+        font-weight: 400;
       }
 
       .image-container {
@@ -337,16 +337,18 @@ $picture-gap: 6vw;
 
         .image-item-picture {
           display: block;
-          width: calc((100vw - $main-margin-left - $main-margin-right - $picture-gap) /2);
+          width: calc(
+            (100vw - $main-margin-left - $main-margin-right - $picture-gap) / 2
+          );
         }
       }
     }
 
     .main-awards-container {
       margin-top: 5vh;
-      height: 30vh;
+      height: 35vh;
 
-      &>div {
+      & > div {
         margin-left: $main-margin-left;
         margin-right: $main-margin-right;
       }
@@ -364,13 +366,13 @@ $picture-gap: 6vw;
         margin-top: 2vh;
 
         .awards-item-title {
-          font-family: 'oboto Flex';
+          font-family: "oboto Flex";
           font-weight: 500;
           font-size: 4.5vw;
         }
 
         .awards-item-content {
-          font-family: 'NanumGothic';
+          font-family: "NanumGothic";
           font-size: 4vw;
         }
       }
@@ -378,10 +380,10 @@ $picture-gap: 6vw;
 
     .main-contact-container {
       border-top: $normal-border-style;
-      height: 35vh;
+      height: 40vh;
       position: relative;
 
-      &>div {
+      & > div {
         margin-left: $main-margin-left;
         margin-right: $main-margin-right;
       }
@@ -407,7 +409,7 @@ $picture-gap: 6vw;
 
         .mail-text {
           color: var(--deeper-white);
-          font-family: 'NanumGothic';
+          font-family: "NanumGothic";
           font-size: 4.5vw;
           display: block;
           // mailto协议的特殊之处，用white-space属性实现换行是无效的
@@ -428,9 +430,9 @@ $picture-gap: 6vw;
 
     .main-sponsor-container {
       border-top: $normal-border-style;
-      height: 50vh;
+      height: 160vh;
 
-      &>div {
+      & > div {
         margin-left: $main-margin-left;
         margin-right: $main-margin-right;
       }
@@ -440,22 +442,48 @@ $picture-gap: 6vw;
         margin-bottom: 1vh;
         margin-top: 3vh;
       }
-
-      .main-sponsor-item {
+      .charge-item-title {
+        color: var(--light-white);
+        font-family: "Roboto Flex";
+        font-weight: 700;
+        font-size: 4.7vw;
+        line-height: 5vw;
+        letter-spacing: 0.075rem;
+      }
+      .main-charge-item {
         display: flex;
         justify-content: space-between;
-        margin-top:2vh;
-        .sponsor-item-title {
-          color:var(--light-white);
-          font-family: 'Roboto Flex';
-          font-weight: 700;
-          font-size: 4.7vw;
-          line-height: 5vw;
-          letter-spacing: 0.075rem;
-        }
-        .sponsor-item-object{
+        margin-top: 2vh;
+        .charge-item-object {
           @extend .mobile-main-text;
-          margin-bottom:1vh;
+          margin-bottom: 1vh;
+        }
+      }
+      .main-sponsor-item {
+        margin-top: 2vh;
+        .sponsor-item {
+          margin-top: 2vh;
+          .sponsor-item-title {
+            color: var(--light-white);
+            font-family: "Roboto Flex";
+            font-size: 4.7vw;
+            line-height: 5vw;
+            letter-spacing: 0.075rem;
+          }
+          .sponsor-item-content {
+            color: var(--light-white);
+            letter-spacing: 0.03rem;
+            line-height: 4vw;
+            font-size: 3.5vw;
+            font-family: "PingFang SC";
+            text-align: justify;
+            margin-top:2vh;
+            margin-bottom: 1vh;
+          }
+          .sponsor-picture {
+            margin-top:1vh;
+            margin-bottom: 2vh;
+          }
         }
       }
     }

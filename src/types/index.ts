@@ -15,3 +15,7 @@ export interface timeLineType {
 export interface awardsMobileType {
   [key:string]:string
 }
+
+export interface sponsorType {
+  [key:string]:string
+}
