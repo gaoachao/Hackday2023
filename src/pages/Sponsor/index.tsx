@@ -2,6 +2,7 @@ import { forwardRef } from "react";
 import styles from "./index.module.scss";
 import { ReactComponent as SVGSponsor } from "@assets/svg/Sponsor/sponsor.svg";
 
+import {sponsorArray} from "@consts/index";
 interface Props {
   //Sponsor组件不需要Props
 }
@@ -40,7 +41,23 @@ const Sponsor= forwardRef<HTMLDivElement, Props>((_, ref) => {
             <SVGSponsor className={styles["svg-sponsor"]} />
           </div>
           <div className={styles["second-line"]}>
-
+            <div className={[styles["big-title"],styles["sponsor-title-text"]].join(' ')}>赞助商</div>
+            <div className={styles["sponsor-box"]}>
+            {
+              sponsorArray.map((item,index)=>{
+                return (
+                  <div className={styles["sponsor-item"]} key={index}>
+                    <img
+                        src={`/image/Sponsor/sponsor${index+1}.png`}
+                        className={styles["sponsor-picture"]}
+                    />
+                    <div className={styles["sponsor-item-title"]}>{Object.keys(item)[0]}</div>
+                    <div className={styles["sponsor-item-content"]}>{Object.values(item)[0]}</div>
+                  </div>
+                )
+              })
+            }
+            </div>
           </div>
         </div>
       </div>

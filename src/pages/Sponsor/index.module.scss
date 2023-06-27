@@ -95,7 +95,34 @@ $border-style: 2px solid var(--deeper-white);
         &>div{
           margin-left:var(--topbar-margin-left);
         }
-
+        .sponsor-title-text{
+          margin-top:3vh;
+          margin-bottom:2vh;
+        }
+        .sponsor-box{
+          display: flex;
+          justify-content: space-between;
+          margin-right:var(--topbar-margin-right);
+          .sponsor-item{
+            width: 16vw;
+            .sponsor-picture{
+              width: 100%;
+            }
+            .sponsor-item-title{
+              @extend .middle-title;
+              margin-top:3vh;
+            }
+            .sponsor-item-content{
+              margin-top:2.5vh;
+              text-align: justify;
+              font-family: "PingFang SC";
+              font-size: 1rem;
+              line-height: 1.1rem;
+              color: var(--deeper-white);
+              letter-spacing: 0.005rem;
+            }
+          }
+        }
       }
 
     }
